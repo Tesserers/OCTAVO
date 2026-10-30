@@ -1,5 +1,6 @@
-import { PROPERTIES, FAQ } from './data.js';
-import { allocate, shortDate, rangeLabel, monthOf } from './allocation.js';
+(function () {
+const { PROPERTIES, FAQ } = window.OCTAVO;
+const { allocate, shortDate, rangeLabel, monthOf } = window.OCTAVO.alloc;
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -126,9 +127,10 @@ function calendar() {
   const yearLabel = $('[data-cal-year]');
 
   const render = () => {
-    const k = Number(form.k.value);
-    const year = Number(form.year.value);
-    const r = allocate({ year, shares: k, profile: form.pref.value });
+    const fd = new FormData(form);
+    const k = Number(fd.get('k'));
+    const year = Number(fd.get('year'));
+    const r = allocate({ year, shares: k, profile: fd.get('pref') });
 
     let html = '';
     r.weeks.forEach((w, i) => {
@@ -168,16 +170,18 @@ function calculator() {
   };
 
   const render = () => {
-    const price = Number(form.price.value);
-    const itp = Number(form.itp.value);
-    const k = Number(form.k.value);
+    const fd = new FormData(form);
+    const price = Number(fd.get('price'));
+    const itp = Number(fd.get('itp'));
+    const k = Number(fd.get('k'));
     const maxRent = 6 * k;
-    if (Number(form.rent.max) !== maxRent) {
-      form.rent.max = maxRent;
-      if (Number(form.rent.value) > maxRent) form.rent.value = maxRent;
+    const rentInput = $('#c-rent');
+    if (Number(rentInput.max) !== maxRent) {
+      rentInput.max = maxRent;
+      if (Number(rentInput.value) > maxRent) rentInput.value = maxRent;
     }
-    const rent = Number(form.rent.value);
-    const week = Number(form.week.value);
+    const rent = Number(rentInput.value);
+    const week = Number(fd.get('week'));
 
     const whole = Math.round(price * (1 + itp + 0.055) + 9643);
     const share = Math.round(whole * 1.10 / 8);
@@ -245,8 +249,8 @@ function contact() {
     const a = e.target.closest('[data-topic]');
     if (!a) return;
     select.value = a.dataset.topic;
-    if (a.dataset.msg) form.mensaje.value = a.dataset.msg;
-    setTimeout(() => form.nombre.focus({ preventScroll: true }), 500);
+    if (a.dataset.msg) $('#f-msg').value = a.dataset.msg;
+    setTimeout(() => $('#f-name').focus({ preventScroll: true }), 500);
   });
 
   form.addEventListener('submit', async e => {
@@ -285,3 +289,4 @@ calculator();
 faq();
 contact();
 $$('[data-year]').forEach(el => (el.textContent = new Date().getFullYear()));
+})();

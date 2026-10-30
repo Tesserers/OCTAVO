@@ -1,7 +1,9 @@
 // Contenido real de Octavo, extraído de mioctavo.com y ordenado.
 // Una sola fuente para viviendas, zonas y preguntas.
 
-export const CONTACT = {
+window.OCTAVO = window.OCTAVO || {};
+
+OCTAVO.CONTACT = {
   phone: '685 046 871',
   phoneHref: 'tel:+34685046871',
   whatsapp: 'https://wa.me/34685046871',
@@ -11,7 +13,7 @@ export const CONTACT = {
 // status: 'abierta' | 'completa' | 'estudio'
 // En la web actual las tres casas figuran con 8/8 vendidas, pero su texto
 // dice "las ocho fracciones están abiertas". Aquí se respeta el dato (8/8).
-export const PROPERTIES = [
+OCTAVO.PROPERTIES = [
   {
     id: 'navahondilla',
     title: 'Villa Serrano',
@@ -56,7 +58,7 @@ export const PROPERTIES = [
   }
 ];
 
-export const ZONES = [
+OCTAVO.ZONES = [
   { name: 'Costa Cantábrica', where: 'Asturias, Cantabria y País Vasco', kind: 'Costa', img: 'assets/img/dest-costaverde.jpg', line: 'Donde empezamos. Acantilados, prados, surf y buena mesa.' },
   { name: 'Sierra de Gredos', where: 'Ávila', kind: 'Montaña', img: 'assets/img/nat-rio.jpg', line: 'Piscinas naturales y Madrid a una hora.' },
   { name: 'Rías Baixas', where: 'Pontevedra y A Coruña', kind: 'Costa', img: 'assets/img/dest-riasbaixas.jpg', line: 'Agua limpia, marisco y un verano corto pero perfecto.' },
@@ -65,7 +67,7 @@ export const ZONES = [
   { name: 'Baleares', where: 'Mallorca, Menorca, Ibiza y Formentera', kind: 'Isla', img: 'assets/img/dest-baleares.jpg', line: 'Calas, sierra y vuelos todo el año.' }
 ];
 
-export const FAQ = [
+OCTAVO.FAQ = [
   {
     cat: 'El modelo',
     items: [

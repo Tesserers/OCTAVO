@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/sections.css">
+  <script>
+    // Si una imagen no está en assets/img, se carga la de mioctavo.com.
+    addEventListener('error', function (e) {
+      var t = e.target;
+      if (t && t.tagName === 'IMG' && !t.dataset.fallback) {
+        t.dataset.fallback = '1';
+        t.src = 'https://www.mioctavo.com/assets/' + t.getAttribute('src').split('/').pop();
+      }
+    }, true);
+  </script>
 </head>
 <body>
   <header class="site-header is-scrolled">

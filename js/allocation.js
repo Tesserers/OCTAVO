@@ -1,3 +1,4 @@
+(function () {
 // Reparto anual de semanas entre ocho fracciones.
 // Reproduce las reglas publicadas por Octavo:
 //  - 52 semanas; la menos deseada por los ocho se queda para mantenimiento.
@@ -33,7 +34,7 @@ function easter(y) {
 }
 
 // Semanas de sábado a sábado, el cambio habitual en casas de vacaciones.
-export function weeksOf(year) {
+function weeksOf(year) {
   let start = Date.UTC(year, 0, 1);
   while (new Date(start).getUTCDay() !== 6) start += DAY;
   return Array.from({ length: 52 }, (_, i) => {
@@ -77,7 +78,7 @@ function ranking(weeks, score, noise, random) {
  * @param {string} o.profile  'verano' | 'puentes' | 'invierno'
  * @returns {{ weeks, owner:number[], maint:number, yours:number[], picks:{i:number,f:number}[], firstSeat:number }}
  */
-export function allocate({ year = 2027, shares = 1, profile = 'verano' } = {}) {
+function allocate({ year = 2027, shares = 1, profile = 'verano' } = {}) {
   const weeks = weeksOf(year);
   const random = rng(year * 31 + 7);
   const othersProfiles = ['verano', 'verano', 'puentes', 'verano', 'invierno', 'puentes', 'verano'];
@@ -123,12 +124,12 @@ export function allocate({ year = 2027, shares = 1, profile = 'verano' } = {}) {
   return { weeks, owner, maint, yours, picks, firstSeat };
 }
 
-export function shortDate(t) {
+function shortDate(t) {
   const d = new Date(t);
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`;
 }
 
-export function rangeLabel(w) {
+function rangeLabel(w) {
   const a = new Date(w.from), b = new Date(w.to);
   const sameMonth = a.getUTCMonth() === b.getUTCMonth();
   return sameMonth
@@ -136,4 +137,8 @@ export function rangeLabel(w) {
     : `Del ${a.getUTCDate()} de ${MONTHS_LONG[a.getUTCMonth()]} al ${b.getUTCDate()} de ${MONTHS_LONG[b.getUTCMonth()]}`;
 }
 
-export function monthOf(t) { return MONTHS[new Date(t).getUTCMonth()]; }
+function monthOf(t) { return MONTHS[new Date(t).getUTCMonth()]; }
+
+window.OCTAVO = window.OCTAVO || {};
+OCTAVO.alloc = { allocate, weeksOf, shortDate, rangeLabel, monthOf };
+})();

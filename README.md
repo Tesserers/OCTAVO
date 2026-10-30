@@ -6,12 +6,19 @@ HTML, CSS y JavaScript sin frameworks ni dependencias. Se publica tal cual en Ne
 
 ## Arrancar en local
 
-Necesitas Node 18 o superior.
+Puedes abrir `index.html` con doble clic y funciona. Para trabajar con servidor local (Node 18 o superior):
 
 ```bash
-npm run assets   # descarga una vez el logo y las fotos reales a assets/img/
 npm run dev      # http://localhost:5173
 ```
+
+## Imágenes
+
+El logo y las fotos van en `assets/img/`. Hay tres formas de tenerlas, de más a menos cómoda:
+
+1. **GitHub Actions**: al subir el repo, en la pestaña Actions lanza "Descargar imágenes". Las baja de mioctavo.com y las guarda en el repo.
+2. **En tu ordenador**: `npm run assets`, y luego haz commit de `assets/img/`.
+3. **Sin hacer nada**: si una imagen no está en `assets/img/`, la página la carga directamente de mioctavo.com. Sirve para trabajar, pero antes de sustituir la web actual hay que tener las imágenes en el repo, porque al publicar la nueva esas direcciones dejan de existir.
 
 ## Estructura
 

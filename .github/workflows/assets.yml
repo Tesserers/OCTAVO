@@ -1,0 +1,30 @@
+name: Descargar imágenes
+
+# Baja el logo y las fotos de mioctavo.com a assets/img/ y las guarda en el repo.
+# Se lanza sola si faltan, o a mano desde la pestaña Actions.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/fetch-assets.mjs
+
+permissions:
+  contents: write
+
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/fetch-assets.mjs
+      - name: Guardar en el repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add assets/img
+          git diff --cached --quiet || git commit -m "Añade logo y fotos de Octavo"
+          git push
