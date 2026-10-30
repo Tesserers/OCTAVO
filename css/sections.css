@@ -286,7 +286,7 @@
 .cal-board { background: var(--paper); padding: clamp(16px, 2vw, 28px); }
 .cal-grid {
   display: grid;
-  grid-template-columns: auto repeat(13, minmax(0, 1fr));
+  grid-template-columns: repeat(13, minmax(0, 1fr));
   gap: 3px;
   align-items: stretch;
 }
@@ -366,6 +366,7 @@
 .field legend, .field label { font-size: var(--fs-s); font-weight: 500; color: var(--ink); padding: 0; }
 .field legend { margin-bottom: 12px; }
 .field-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.field .segmented { justify-self: start; }
 .field output { font-family: var(--serif); font-size: 1.5rem; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
 
 input[type="range"] {

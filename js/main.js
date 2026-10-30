@@ -4,7 +4,8 @@ const { allocate, shortDate, rangeLabel, monthOf } = window.OCTAVO.alloc;
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-const eur = n => new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0 }).format(n) + ' €';
+// Separador de miles también en cifras de cuatro dígitos (1.170 €), que Intl en español no agrupa.
+const eur = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const WORDS = ['', 'un octavo', 'dos octavos', 'tres octavos', 'cuatro octavos'];
 
@@ -134,7 +135,6 @@ function calendar() {
 
     let html = '';
     r.weeks.forEach((w, i) => {
-      if (i % 13 === 0) html += `<span class="cal-q">${monthOf(w.from)} a ${monthOf(r.weeks[Math.min(i + 12, 51)].to - 86400000)}</span>`;
       const cls = i === r.maint ? 'is-maint' : r.owner[i] < k ? 'is-yours' : '';
       const who = i === r.maint ? 'mantenimiento' : r.owner[i] < k ? 'tuya' : 'de otro copropietario';
       html += `<div class="cal-cell ${cls}" aria-label="${rangeLabel(w)}, ${who}"><b>${new Date(w.from).getUTCDate()}</b>${monthOf(w.from)}</div>`;
@@ -191,7 +191,7 @@ function calculator() {
     out('week').textContent = eur(week);
     res('share').textContent = eur(share * k);
     res('whole').textContent = eur(whole);
-    res('weeks').textContent = `${maxRent}${rent ? `, ${maxRent - rent} para ti` : ''}`;
+    res('weeks').textContent = `${maxRent - rent} de ${maxRent}`;
     res('income').textContent = eur(Math.round(rent * week * 0.65 / 10) * 10);
 
     $('[data-calc-cta]').dataset.msg = `Busco ${WORDS[k]} en una casa de unos ${eur(price)}.`;

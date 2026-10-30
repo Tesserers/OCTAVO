@@ -1,6 +1,6 @@
 // Descarga una vez los recursos de marca y las fotos reales desde mioctavo.com
+// a la carpeta assets/img/. Uso: npm run assets
 // Lo ejecuta también la acción "Descargar imágenes" de GitHub.
-// a la carpeta assets/. Uso: npm run assets
 import { mkdir, writeFile, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
