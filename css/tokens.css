@@ -1,0 +1,50 @@
+/* Octavo, tokens de marca.
+   Colores tomados de la web actual y ordenados por función.
+   Regla: el terracota solo marca lo que es tuyo (tus semanas, tu octavo, tu precio). */
+:root {
+  /* Tinta y texto */
+  --ink: #15181C;
+  --text: #22262B;
+  --graphite: #383D42;
+  --muted: #5F6469;
+  --faint: #8C9297;
+
+  /* Superficies */
+  --paper: #FFFFFF;
+  --stone: #EEF0F1;
+  --stone-2: #E3E6E8;
+  --line: #DEE1E3;
+  --line-strong: #C4C9CC;
+
+  /* Lo tuyo */
+  --terra: #A8341F;
+  --coral: #E0764F;
+  --blush: #F1D9CE;
+  --blush-50: #FBF1EC;
+
+  /* Tipografía */
+  --sans: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  /* Escala (base 17px, razón 1.25 en texto y saltos mayores en display) */
+  --fs-xs: 0.8125rem;   /* 13 */
+  --fs-s: 0.9375rem;    /* 15 */
+  --fs-m: 1.0625rem;    /* 17 */
+  --fs-l: 1.25rem;      /* 20 */
+  --fs-xl: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);
+  --fs-h2: clamp(1.875rem, 1.3rem + 2.1vw, 3.25rem);
+  --fs-display: clamp(2.5rem, 1.4rem + 4.4vw, 5.25rem);
+  --fs-num: clamp(2.75rem, 1.8rem + 3.4vw, 4.75rem);
+
+  /* Espacio */
+  --gutter: clamp(20px, 4vw, 64px);
+  --max: 1320px;
+  --sec-y: clamp(72px, 9vw, 152px);
+
+  /* Forma: poca y con intención. Botones y controles redondeados, fotos rectas. */
+  --r-control: 999px;
+  --r-field: 8px;
+  --r-panel: 4px;
+
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}

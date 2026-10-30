@@ -1,0 +1,15 @@
+{
+  "name": "octavo-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rediseño de mioctavo.com. Copia de trabajo privada.",
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/fetch-assets.mjs",
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

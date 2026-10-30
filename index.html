@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Octavo | Copropiedad de casas de vacaciones en España desde 25.000 €</title>
+  <meta name="description" content="Compra un octavo de una casa de vacaciones, con escritura pública a tu nombre y al menos seis semanas al año. Una sola cuota y toda la gestión incluida.">
+  <link rel="canonical" href="https://www.mioctavo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Octavo">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Octavo | Tu casa de vacaciones en propiedad, por un octavo">
+  <meta property="og:description" content="Un octavo de una casa concreta, ante notario y a tu nombre. Seis semanas al año como mínimo y la gestión incluida.">
+  <meta property="og:image" content="https://www.mioctavo.com/assets/img/hero-costa.jpg">
+  <meta name="theme-color" content="#15181C">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Octavo, inicio">
+        <img src="assets/img/logo-octavo.png" alt="Octavo" width="146" height="22">
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#viviendas">Viviendas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#calendario">Calendario</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn-solid header-cta" href="#contacto">Hablar con nosotros</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+        <span class="sr-only">Abrir menú</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="display">Tu casa de vacaciones en propiedad, por el precio de un coche.</h1>
+          <p class="lede">Compras un octavo de una casa concreta, ante notario y a tu nombre. Te tocan al menos seis semanas al año y nosotros nos ocupamos de todo lo demás.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#viviendas">Ver las casas</a>
+            <a class="btn btn-line" href="#calculadora">Calcular mi octavo</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/img/hero-costa.jpg" alt="Costa con agua turquesa y rocas" width="1600" height="900" fetchpriority="high">
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <div class="year" data-hero-year aria-label="Ejemplo de reparto de un año entre ocho copropietarios">
+          <div class="year-head">
+            <p class="year-caption"><strong>Un año de la casa, repartido entre ocho.</strong> En color, las semanas que podrían ser tuyas con <span data-hero-shares>un octavo</span>.</p>
+            <div class="segmented" role="group" aria-label="Octavos que compras">
+              <button type="button" aria-pressed="true" data-hero-k="1">1/8</button>
+              <button type="button" aria-pressed="false" data-hero-k="2">2/8</button>
+              <button type="button" aria-pressed="false" data-hero-k="3">3/8</button>
+              <button type="button" aria-pressed="false" data-hero-k="4">4/8</button>
+            </div>
+          </div>
+          <ol class="year-strip" data-strip></ol>
+          <div class="year-months" aria-hidden="true">
+            <span>ene</span><span>feb</span><span>mar</span><span>abr</span><span>may</span><span>jun</span><span>jul</span><span>ago</span><span>sep</span><span>oct</span><span>nov</span><span>dic</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LA IDEA -->
+    <section class="section idea" aria-labelledby="idea-title">
+      <div class="wrap idea-grid">
+        <div>
+          <h2 id="idea-title" class="h2">Nadie usa su casa de vacaciones las 52 semanas. Y casi todos la pagan entera.</h2>
+          <p class="body-l">Octavo divide una casa en ocho partes iguales. Pagas la tuya, usas tus semanas y compartes los gastos con siete personas que buscan lo mismo que tú.</p>
+        </div>
+        <div class="ledger" role="table" aria-label="Comprar una casa entera frente a comprar un octavo, en una casa de 350.000 €">
+          <div class="ledger-row ledger-head" role="row">
+            <span role="columnheader">Casa de 350.000 €</span>
+            <span role="columnheader">Comprarla entera</span>
+            <span role="columnheader" class="is-yours">Con Octavo</span>
+          </div>
+          <div class="ledger-row ledger-total" role="row">
+            <span role="rowheader">Lo que pones</span>
+            <span role="cell"><b class="num">406.893 €</b></span>
+            <span role="cell" class="is-yours"><b class="num">55.948 €</b></span>
+          </div>
+          <div class="ledger-row" role="row">
+            <span role="rowheader">Semanas de uso</span>
+            <span role="cell">52, aunque uses seis</span>
+            <span role="cell">Al menos 6, sabiendo cuáles</span>
+          </div>
+          <div class="ledger-row" role="row">
+            <span role="rowheader">Impuestos, seguro, averías</span>
+            <span role="cell">Todo tuyo</span>
+            <span role="cell">Un octavo, en una cuota cerrada</span>
+          </div>
+          <div class="ledger-row" role="row">
+            <span role="rowheader">Limpieza y mantenimiento</span>
+            <span role="cell">Te toca organizarlo</span>
+            <span role="cell">Incluido</span>
+          </div>
+          <div class="ledger-row" role="row">
+            <span role="rowheader">Si quieres salir</span>
+            <span role="cell">Vender y que el comprador pague ITP</span>
+            <span role="cell">Vendes participaciones, sin ITP</span>
+          </div>
+          <p class="ledger-note">Incluye ITP del 8 %, notaría, registro, gestoría, mobiliario, licencia y sociedad. El ITP cambia según la comunidad autónoma.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIVIENDAS -->
+    <section class="section homes" id="viviendas" aria-labelledby="homes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="homes-title" class="h2">Las casas</h2>
+          <p class="body-l">Cada casa es una vivienda concreta, con su dirección y su referencia catastral. Cuando una se completa, abrimos lista de espera para esa zona.</p>
+        </div>
+        <div class="home-list" data-homes></div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section how" id="como-funciona" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title" class="h2">De la reserva a tus primeras vacaciones</h2>
+          <p class="body-l">No esperamos a tener las ocho fracciones vendidas. Cuando hay grupo suficiente, compramos la casa y Octavo se queda las que falten.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <p class="step-when">Hoy</p>
+            <h3 class="h3">Reservas tu octavo</h3>
+            <p>500 € por fracción, válidos cuatro meses y renovables. Se descuentan del precio. Si no compramos la casa en plazo, te los devolvemos enteros.</p>
+          </li>
+          <li class="step">
+            <p class="step-when">Cuando hay grupo</p>
+            <h3 class="h3">Arras y notaría</h3>
+            <p>Firmas el compromiso y pagas las arras, el 15 % de tu fracción menos la reserva. Compramos la casa ante notario en menos de noventa días.</p>
+          </li>
+          <li class="step">
+            <p class="step-when">Desde entonces</p>
+            <h3 class="h3">Disfrutas tus semanas</h3>
+            <p>Limpiamos, mantenemos, reparamos y, si quieres, alquilamos las semanas que no uses. Tú ves todo desde tu área privada.</p>
+          </li>
+        </ol>
+        <p class="aside">Tienes catorce días después de reservar para echarte atrás sin dar explicaciones.</p>
+      </div>
+    </section>
+
+    <!-- CALENDARIO -->
+    <section class="section cal" id="calendario" aria-labelledby="cal-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="cal-title" class="h2">Seis semanas por octavo. Y sabes cuáles con tres años de antelación.</h2>
+          <p class="body-l">Cada otoño los ocho ordenáis las semanas del año siguiente. Se reparten por rondas y en cada ronda elige primero quien peor lleva el reparto. Sin sorteos y sin carreras a una hora concreta.</p>
+        </div>
+
+        <div class="cal-tool" data-cal>
+          <form class="cal-controls" data-cal-form>
+            <fieldset>
+              <legend>Octavos</legend>
+              <div class="segmented">
+                <label><input type="radio" name="k" value="1" checked><span>1</span></label>
+                <label><input type="radio" name="k" value="2"><span>2</span></label>
+                <label><input type="radio" name="k" value="3"><span>3</span></label>
+                <label><input type="radio" name="k" value="4"><span>4</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Lo que más te importa</legend>
+              <div class="segmented segmented-wide">
+                <label><input type="radio" name="pref" value="verano" checked><span>Verano</span></label>
+                <label><input type="radio" name="pref" value="puentes"><span>Puentes y Semana Santa</span></label>
+                <label><input type="radio" name="pref" value="invierno"><span>Invierno</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Año</legend>
+              <div class="segmented">
+                <label><input type="radio" name="year" value="2027" checked><span>2027</span></label>
+                <label><input type="radio" name="year" value="2028"><span>2028</span></label>
+                <label><input type="radio" name="year" value="2029"><span>2029</span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="cal-board">
+            <div class="cal-grid" data-cal-grid aria-describedby="cal-legend"></div>
+            <div class="cal-legend" id="cal-legend">
+              <span><i class="sw sw-yours"></i>Tus semanas</span>
+              <span><i class="sw sw-other"></i>Otros copropietarios</span>
+              <span><i class="sw sw-maint"></i>Mantenimiento</span>
+            </div>
+          </div>
+
+          <aside class="cal-summary" aria-live="polite">
+            <h3 class="h3">Tus semanas en <span data-cal-year>2027</span></h3>
+            <ul class="cal-weeks" data-cal-list></ul>
+            <p class="cal-foot" data-cal-foot></p>
+          </aside>
+        </div>
+        <p class="aside">Es una simulación con preferencias inventadas para los otros siete. El reparto real sale cada otoño de lo que ordenéis los ocho, y después podéis intercambiar semanas entre vosotros.</p>
+      </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="section calc" id="calculadora" aria-labelledby="calc-title">
+      <div class="wrap calc-grid">
+        <div class="section-head">
+          <h2 id="calc-title" class="h2">Lo que te costaría</h2>
+          <p class="body-l">Mueve el precio de la casa y mira el de tu octavo, con los impuestos, la notaría, la sociedad y los muebles ya dentro. Sin registrarte.</p>
+        </div>
+
+        <form class="calc-form" data-calc>
+          <div class="field">
+            <div class="field-row">
+              <label for="c-price">Precio de la casa</label>
+              <output for="c-price" data-out="price">350.000 €</output>
+            </div>
+            <input id="c-price" name="price" type="range" min="150000" max="600000" step="5000" value="350000">
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="c-itp">Comunidad autónoma</label>
+            </div>
+            <select id="c-itp" name="itp">
+              <option value="0.06">Madrid, País Vasco o Navarra (ITP 6 %)</option>
+              <option value="0.07">Andalucía, Canarias o Murcia (ITP 7 %)</option>
+              <option value="0.08" selected>Asturias, Castilla y León o Baleares (ITP 8 %)</option>
+              <option value="0.10">Cataluña, Galicia o Comunitat Valenciana (ITP 10 %)</option>
+            </select>
+          </div>
+
+          <fieldset class="field">
+            <legend>Octavos que compras</legend>
+            <div class="segmented">
+              <label><input type="radio" name="k" value="1" checked><span>1</span></label>
+              <label><input type="radio" name="k" value="2"><span>2</span></label>
+              <label><input type="radio" name="k" value="3"><span>3</span></label>
+              <label><input type="radio" name="k" value="4"><span>4</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="c-rent">Semanas que alquilarías</label>
+              <output for="c-rent" data-out="rent">2 de 6</output>
+            </div>
+            <input id="c-rent" name="rent" type="range" min="0" max="6" step="1" value="2">
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="c-week">Precio por semana alquilada</label>
+              <output for="c-week" data-out="week">900 €</output>
+            </div>
+            <input id="c-week" name="week" type="range" min="300" max="3000" step="50" value="900">
+          </div>
+        </form>
+
+        <div class="calc-result" aria-live="polite">
+          <dl class="result-main">
+            <dt>Tu parte</dt>
+            <dd class="num" data-res="share">55.948 €</dd>
+          </dl>
+          <dl class="result-list">
+            <div><dt>Comprar la casa entera</dt><dd data-res="whole">406.893 €</dd></div>
+            <div><dt>Semanas de uso al año</dt><dd data-res="weeks">6</dd></div>
+            <div><dt>Ingresos netos por alquiler, al año</dt><dd data-res="income">1.170 €</dd></div>
+          </dl>
+          <p class="result-note">Estimación con los costes medios de nuestras operaciones. Cada casa publica su precio cerrado y su presupuesto anual, partida a partida, antes de que reserves. Del alquiler te queda en torno al 65 %, después de nuestra comisión y la del portal.</p>
+          <a class="btn btn-solid" href="#contacto" data-calc-cta>Quiero ver casas en este precio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EL MODELO -->
+    <section class="section model" id="modelo" aria-labelledby="model-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="model-title" class="h2">Qué compras exactamente</h2>
+          <p class="body-l">Propiedad real de una casa concreta. No compras semanas, ni puntos que caducan, ni un derecho de uso.</p>
+        </div>
+
+        <ol class="chain">
+          <li>
+            <h3 class="h3">La casa</h3>
+            <p>Una vivienda concreta, con su dirección y su referencia catastral.</p>
+          </li>
+          <li>
+            <h3 class="h3">Una sociedad solo para ella</h3>
+            <p>Compra la casa y queda inscrita en el Registro de la Propiedad. Tiene su propia cuenta, separada de Octavo.</p>
+          </li>
+          <li>
+            <h3 class="h3">Ocho participaciones</h3>
+            <p>El capital se divide en ocho partes iguales. Nadie puede tener más de cuatro.</p>
+          </li>
+          <li class="is-yours">
+            <h3 class="h3">Tu fracción</h3>
+            <p>Ante notario y a tu nombre. La puedes vender, donar o dejar en herencia.</p>
+          </li>
+        </ol>
+
+        <div class="fee">
+          <div>
+            <h3 class="h3">Dentro de la cuota</h3>
+            <ul class="ticks">
+              <li>Calendario de uso y área privada</li>
+              <li>Limpieza entre estancias</li>
+              <li>Mantenimiento y pequeñas reparaciones</li>
+              <li>Suministros, seguro e IBI</li>
+              <li>Contabilidad e impuestos de la sociedad</li>
+              <li>Recepción de tu compra antes de llegar</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="h3">Aparte</h3>
+            <ul class="ticks ticks-muted">
+              <li>Reformas o mejoras que decidáis en junta</li>
+              <li>Servicios opcionales para tu estancia</li>
+              <li>Desperfectos, que paga quien los causa</li>
+            </ul>
+          </div>
+          <div class="fee-docs">
+            <h3 class="h3">Léelo antes de firmar</h3>
+            <p>Los estatutos, el pacto de socios, las normas de la casa y el presupuesto están publicados en blanco. Descárgalos sin dejar tus datos y léelos con tu abogado.</p>
+            <a class="link" href="#contacto">Pedir los documentos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="section-head">
+          <h2 id="faq-title" class="h2">Lo que nos preguntan antes de comprar</h2>
+          <div class="faq-tabs" role="tablist" aria-label="Temas" data-faq-tabs></div>
+        </div>
+        <div class="faq-list" data-faq-list></div>
+      </div>
+    </section>
+
+    <!-- TIENES UNA CASA -->
+    <section class="section owners" aria-labelledby="owners-title">
+      <div class="wrap owners-grid">
+        <h2 id="owners-title" class="h2">¿Tienes una casa que casi no pisas?</h2>
+        <div>
+          <p class="body-l">Si la has heredado, la compartes con tus hermanos o apenas la usas, la convertimos en ocho fracciones, vendemos las que no quieras y te la gestionamos. Te quedas con tu parte y con tus semanas.</p>
+          <p>Buscamos casas de 150.000 a 600.000 €, en costa, montaña o pueblo con atractivo, a menos de dos horas de una ciudad grande y libres de cargas. Te contestamos en 48 horas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#contacto" data-topic="vender">Ofrecer mi casa</a>
+            <a class="btn btn-line" href="#contacto" data-topic="colaborar">Soy inmobiliaria</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-title" class="h2">Cuéntanos qué buscas</h2>
+          <p class="body-l">Te contesta una persona del equipo en menos de 24 horas laborables. Si prefieres, quince minutos de videollamada y lo vemos con números.</p>
+          <ul class="contact-direct">
+            <li><a href="tel:+34685046871">685 046 871</a></li>
+            <li><a href="https://wa.me/34685046871" rel="noopener">Escribir por WhatsApp</a></li>
+            <li><a href="mailto:info@mioctavo.com">info@mioctavo.com</a></li>
+          </ul>
+        </div>
+
+        <form class="form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-form>
+          <input type="hidden" name="form-name" value="contacto">
+          <p class="sr-only"><label>No rellenes esto <input name="bot-field"></label></p>
+
+          <div class="form-row">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="form-2">
+            <div class="form-row">
+              <label for="f-tel">Teléfono</label>
+              <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="form-row">
+              <label for="f-mail">Correo</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="f-topic">Sobre qué</label>
+            <select id="f-topic" name="tema" data-topic-select>
+              <option value="comprar">Quiero comprar un octavo</option>
+              <option value="lista">Apuntarme a la lista de espera de una zona</option>
+              <option value="documentos">Quiero los documentos legales</option>
+              <option value="vender">Tengo una casa para Octavo</option>
+              <option value="colaborar">Soy inmobiliaria o agente</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="f-msg">Cuéntanos más <span class="opt">(opcional)</span></label>
+            <textarea id="f-msg" name="mensaje" rows="4"></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="consentimiento" required>
+            <span>Acepto que Octavo trate mis datos para responderme, según la <a href="legal.html#privacidad">política de privacidad</a>.</span>
+          </label>
+          <button class="btn btn-solid" type="submit">Enviar</button>
+          <p class="form-status" role="status" data-form-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo-octavo-blanco.png" alt="Octavo" width="146" height="22" loading="lazy">
+        <p>Copropiedad de casas de vacaciones en España.</p>
+      </div>
+      <nav aria-label="Octavo">
+        <h2 class="footer-h">Octavo</h2>
+        <a href="#viviendas">Las casas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#modelo">Qué compras</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <nav aria-label="Contacto">
+        <h2 class="footer-h">Contacto</h2>
+        <a href="tel:+34685046871">685 046 871</a>
+        <a href="mailto:info@mioctavo.com">info@mioctavo.com</a>
+        <a href="https://wa.me/34685046871" rel="noopener">WhatsApp</a>
+      </nav>
+      <nav aria-label="Legal">
+        <h2 class="footer-h">Legal</h2>
+        <a href="legal.html#aviso">Aviso legal</a>
+        <a href="legal.html#privacidad">Privacidad</a>
+        <a href="legal.html#cookies">Cookies</a>
+        <a href="legal.html#condiciones">Condiciones</a>
+      </nav>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span data-year>2026</span> Octavo</p>
+    </div>
+  </footer>
+</body>
+</html>
